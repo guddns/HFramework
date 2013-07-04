@@ -5,6 +5,6 @@ Pod::Spec.new do |s|
   s.license      = 'Apache License 2.0'
   s.source       = { :git => "https://github.com/guddns/HFramework.git" }
   s.platform     = :ios, '5.0'
-  s.source_files = 'HFramework/*.{h,m}'
+  s.source_files = 'HFramework/**/*.{h,m}'
   s.requires_arc = true
 end
