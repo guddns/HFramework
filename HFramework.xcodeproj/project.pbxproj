@@ -38,6 +38,8 @@
 		9DCBEA99178666F10062193D /* tab_2_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DCBEA85178666F10062193D /* tab_2_on.png */; };
 		9DCBEA9A178666F10062193D /* tacbbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DCBEA86178666F10062193D /* tacbbg.png */; };
 		9DCBEAA817867D130062193D /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DCBE9A2178647A00062193D /* UIView+Additions.m */; };
+		9DCBEAB517869A010062193D /* HF_Thread.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DCBEAB217869A000062193D /* HF_Thread.m */; };
+		9DCBEAB617869A010062193D /* HF_Sandbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DCBEAB417869A010062193D /* HF_Sandbox.m */; };
 		9DCF96C0176AFF9D00D86FAA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DCF96BF176AFF9D00D86FAA /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +105,13 @@
 		9DCBEA84178666F10062193D /* tab_2_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_2_off.png; sourceTree = "<group>"; };
 		9DCBEA85178666F10062193D /* tab_2_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_2_on.png; sourceTree = "<group>"; };
 		9DCBEA86178666F10062193D /* tacbbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tacbbg.png; sourceTree = "<group>"; };
+		9DCBEAAE178698DB0062193D /* HF_Core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HF_Core.h; sourceTree = "<group>"; };
+		9DCBEAAF178699730062193D /* HF_Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HF_Log.h; sourceTree = "<group>"; };
+		9DCBEAB0178699FF0062193D /* HF_Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HF_Singleton.h; sourceTree = "<group>"; };
+		9DCBEAB117869A000062193D /* HF_Thread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HF_Thread.h; sourceTree = "<group>"; };
+		9DCBEAB217869A000062193D /* HF_Thread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HF_Thread.m; sourceTree = "<group>"; };
+		9DCBEAB317869A000062193D /* HF_Sandbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HF_Sandbox.h; sourceTree = "<group>"; };
+		9DCBEAB417869A010062193D /* HF_Sandbox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HF_Sandbox.m; sourceTree = "<group>"; };
 		9DCF96BC176AFF9D00D86FAA /* libHFramework.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libHFramework.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DCF96BF176AFF9D00D86FAA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9DCF96C3176AFF9D00D86FAA /* HFramework-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HFramework-Prefix.pch"; sourceTree = "<group>"; };
@@ -185,9 +194,16 @@
 		9DCBE9A4178647A00062193D /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				9DCBEAB0178699FF0062193D /* HF_Singleton.h */,
+				9DCBEAB117869A000062193D /* HF_Thread.h */,
+				9DCBEAB217869A000062193D /* HF_Thread.m */,
+				9DCBEAB317869A000062193D /* HF_Sandbox.h */,
+				9DCBEAB417869A010062193D /* HF_Sandbox.m */,
 				9DCBE9A5178647A00062193D /* HF_Dimensions.h */,
 				9DCBE9A6178647A00062193D /* HF_Dimensions.m */,
 				9DCBE9A7178647A00062193D /* HF_ARCSupport.h */,
+				9DCBEAAE178698DB0062193D /* HF_Core.h */,
+				9DCBEAAF178699730062193D /* HF_Log.h */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -414,6 +430,8 @@
 				9DCBE9B6178647A00062193D /* UIView+Additions.m in Sources */,
 				9DCBE9B7178647A00062193D /* HF_Dimensions.m in Sources */,
 				9DCBE9B8178647A00062193D /* HFTabBarViewController.m in Sources */,
+				9DCBEAB517869A010062193D /* HF_Thread.m in Sources */,
+				9DCBEAB617869A010062193D /* HF_Sandbox.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

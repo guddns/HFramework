@@ -7,5 +7,6 @@
 //
 
 #import "HF_Precompile.h"
-#import "HF_ViewControllers.h"
 #import "HF_Additions.h"
+#import "HF_Core.h"
+#import "HF_ViewControllers.h"

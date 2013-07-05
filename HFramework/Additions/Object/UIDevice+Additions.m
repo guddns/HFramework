@@ -14,7 +14,7 @@
 #include <net/if.h>
 #include <net/if_dl.h>
 
-NSString* NSStringGenerateSHA1FromString(NSString *string);
+NSString* HFStringGenerateSHA1FromString(NSString *string);
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -73,18 +73,18 @@ NSString* NSStringGenerateSHA1FromString(NSString *string);
 
 - (NSString *)uniqueApplicationDeviceIdentifier
 {
-	return NSStringGenerateSHA1FromString([NSString stringWithFormat:@"RHDeviceIdentifier-%@-%@", [[NSBundle mainBundle] bundleIdentifier], [self macAddressForInterface:@"en0"]]);
+	return HFStringGenerateSHA1FromString([NSString stringWithFormat:@"RHDeviceIdentifier-%@-%@", [[NSBundle mainBundle] bundleIdentifier], [self macAddressForInterface:@"en0"]]);
 }
 
 - (NSString *)uniqueGlobalDeviceIdentifier
 {
-	return NSStringGenerateSHA1FromString([NSString stringWithFormat:@"RHDeviceIdentifier-%@",[self macAddressForInterface:@"en0"]]);
+	return HFStringGenerateSHA1FromString([NSString stringWithFormat:@"RHDeviceIdentifier-%@",[self macAddressForInterface:@"en0"]]);
 }
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-NSString* NSStringGenerateSHA1FromString(NSString *string) {
+NSString* HFStringGenerateSHA1FromString(NSString *string) {
     if (! string) return nil;
     //sha1 hash the string
     const char *str = [string UTF8String];
