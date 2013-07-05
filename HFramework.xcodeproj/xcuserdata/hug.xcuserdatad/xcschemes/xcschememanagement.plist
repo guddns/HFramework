@@ -9,9 +9,19 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>HFrameworkSample.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>9DCBE9BC178661350062193D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>9DCF96BB176AFF9D00D86FAA</key>
 		<dict>
 			<key>primary</key>

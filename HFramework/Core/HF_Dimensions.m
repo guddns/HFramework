@@ -6,13 +6,13 @@
 //  Copyright (c) 2013년 hug. All rights reserved.
 //
 
-#import "CGRect+Additions.h"
+#import "HF_Dimensions.h"
 
-UIInterfaceOrientation HInterfaceOrientation() {
+UIInterfaceOrientation HFInterfaceOrientation() {
 	return [[UIApplication sharedApplication] statusBarOrientation];
 }
 
-CGAffineTransform HRotateTransformForOrientation(UIInterfaceOrientation orientation) {
+CGAffineTransform HFRotateTransformForOrientation(UIInterfaceOrientation orientation) {
 	if (orientation == UIInterfaceOrientationLandscapeLeft) {
 		return CGAffineTransformMakeRotation(M_PI * 1.5);
 	} else if (orientation == UIInterfaceOrientationLandscapeRight) {
@@ -24,10 +24,10 @@ CGAffineTransform HRotateTransformForOrientation(UIInterfaceOrientation orientat
 	}
 }
 
-CGRect HScreenBounds() {
+CGRect HFScreenBounds() {
 	return [[UIScreen mainScreen] bounds];
 }
 
-CGRect HApplicationFrame() {
+CGRect HFApplicationFrame() {
 	return [[UIScreen mainScreen] applicationFrame];
 }
