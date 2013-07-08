@@ -78,13 +78,14 @@ return NSUIntegerMax; \
 return self; \
 }
 
+
 ////////////////////////////////////////////////////////////////////////
 // XIB 가 있는 ViewController 의 getter 를 추가하는 매크로
 
 #define NEW_INSTANTIATION_XIB(type) \
 \
 - (type *)create##type { \
-type *vc = [[[type alloc] initWithNibName:[NSString stringWithFormat:@"%@", [type class]] bundle:nil] autorelease]; \
+type *vc = [[type alloc] initWithNibName:[NSString stringWithFormat:@"%@", [type class]] bundle:nil]; \
 NSLog(@"%@ is instantiation.", vc); \
 return vc; \
 }
