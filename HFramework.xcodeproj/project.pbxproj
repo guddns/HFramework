@@ -41,6 +41,7 @@
 		9DCBEAB517869A010062193D /* HF_Thread.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DCBEAB217869A000062193D /* HF_Thread.m */; };
 		9DCBEAB617869A010062193D /* HF_Sandbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DCBEAB417869A010062193D /* HF_Sandbox.m */; };
 		9DCF96C0176AFF9D00D86FAA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DCF96BF176AFF9D00D86FAA /* Foundation.framework */; };
+		FD07CE14178B41670058344B /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = FD07CE13178B41670058344B /* NSString+Additions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -115,6 +116,8 @@
 		9DCF96BC176AFF9D00D86FAA /* libHFramework.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libHFramework.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DCF96BF176AFF9D00D86FAA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9DCF96C3176AFF9D00D86FAA /* HFramework-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HFramework-Prefix.pch"; sourceTree = "<group>"; };
+		FD07CE12178B41670058344B /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
+		FD07CE13178B41670058344B /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +170,8 @@
 				9DCBE999178647A00062193D /* UIColor+Additions.m */,
 				9DCBE99A178647A00062193D /* UIDevice+Additions.h */,
 				9DCBE99B178647A00062193D /* UIDevice+Additions.m */,
+				FD07CE12178B41670058344B /* NSString+Additions.h */,
+				FD07CE13178B41670058344B /* NSString+Additions.m */,
 			);
 			path = Object;
 			sourceTree = "<group>";
@@ -432,6 +437,7 @@
 				9DCBE9B8178647A00062193D /* HFTabBarViewController.m in Sources */,
 				9DCBEAB517869A010062193D /* HF_Thread.m in Sources */,
 				9DCBEAB617869A010062193D /* HF_Sandbox.m in Sources */,
+				FD07CE14178B41670058344B /* NSString+Additions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,6 +589,7 @@
 				9DCBE9DD178661350062193D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9DCF96B7176AFF9D00D86FAA /* Build configuration list for PBXProject "HFramework" */ = {
 			isa = XCConfigurationList;
