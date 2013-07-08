@@ -7,6 +7,7 @@
 //
 
 #import "NSString+MD5Addition.h"
+#import "NSString+Additions.h"
 #import "NSDictionary+Additions.h"
 #import "UIColor+Additions.h"
 #import "UIApplication+Additions.h"
