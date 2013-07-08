@@ -285,4 +285,35 @@
 	}
 }
 
+- (void)hideKeyboardForStatement:(UIView *)view
+{
+    for(int i = 0; i < [view.subviews count]; i++)
+    {
+        // view가 포함하고 있는 하위 뷰들을 하나씩 꺼낸다.
+        UIView *tempView = [view.subviews objectAtIndex:i];
+        // 해당 뷰가 UITextInputTraits 프로토콜을 가지고 있다면
+        if([tempView conformsToProtocol:@protocol(UITextInputTraits)])
+        {
+            // 해당뷰는 키보드뷰 이며 그 뷰가 포커스를 잃게 만든다
+            [tempView resignFirstResponder];
+        }
+    }
+    
+}
+
+- (void)hideKeyboard
+{
+    UIWindow *window;
+    for(int i = 0; i < [[[UIApplication sharedApplication] windows] count]; i++)
+    {
+        // Application에 존재하는 Window를 하나씩 꺼내온다.
+        window = [[[UIApplication sharedApplication] windows] objectAtIndex:i];
+        for(int j = 0; j < [window.subviews count]; j++)
+        {
+            // Window에 존재하는 View를 하나씩 꺼내어 hideKeyboardForStatment 메소드로 전달한다.
+            [self hideKeyboardForStatement:[window.subviews objectAtIndex:j]];
+        }
+    }
+}
+
 @end
