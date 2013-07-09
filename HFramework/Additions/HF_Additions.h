@@ -16,3 +16,4 @@
 #import "UIAlertView+Additions.h"
 #import "UILabel+Additions.h"
 #import "UIButton+Additions.h"
+#import "UIBarButtonItem+Additions.h"
