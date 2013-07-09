@@ -15,3 +15,4 @@
 #import "UIView+Additions.h"
 #import "UIAlertView+Additions.h"
 #import "UILabel+Additions.h"
+#import "UIButton+Additions.h"
