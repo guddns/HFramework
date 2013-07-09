@@ -7,6 +7,7 @@
 //
 
 #import "NSString+Additions.h"
+#import <CommonCrypto/CommonCrypto.h>
 
 @implementation NSString (Additions)
 
@@ -28,7 +29,7 @@
     return [frmtr stringFromNumber:[NSNumber numberWithInt:number]];
 }
 
-- (NSString *) md5
+- (NSString *)md5
 {
     const char *cStr = [self UTF8String];
     unsigned char result[16];
@@ -42,7 +43,7 @@
 			];
 }
 
-+ (NSString*) uniqueString
++ (NSString *)uniqueString
 {
 	CFUUIDRef	uuidObj = CFUUIDCreate(nil);
 	NSString	*uuidString = (__bridge_transfer NSString*)CFUUIDCreateString(nil, uuidObj);
@@ -60,7 +61,7 @@
     
     NSString *encodedString = [[NSString alloc] initWithString:(__bridge_transfer NSString*) encodedCFString];
     
-    if(!encodedString)
+    if (!encodedString)
         encodedString = @"";
     
     return encodedString;
@@ -68,13 +69,11 @@
 
 - (NSString *)urlDecodedString
 {
-    
     CFStringRef decodedCFString = CFURLCreateStringByReplacingPercentEscapesUsingEncoding(kCFAllocatorDefault,
                                                                                           (__bridge CFStringRef) self,
                                                                                           CFSTR(""),
                                                                                           kCFStringEncodingUTF8);
     
-    // We need to replace "+" with " " because the CF method above doesn't do it
     NSString *decodedString = [[NSString alloc] initWithString:(__bridge_transfer NSString*) decodedCFString];
     return (!decodedString) ? @"" : [decodedString stringByReplacingOccurrencesOfString:@"+" withString:@" "];
 }
