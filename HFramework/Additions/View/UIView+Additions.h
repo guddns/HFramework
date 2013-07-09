@@ -42,4 +42,8 @@
 
 - (UIViewController *)viewController;
 
+- (void)hideKeyboardForStatement:(UIView *)view;
+
+- (void)hideKeyboard;
+
 @end
