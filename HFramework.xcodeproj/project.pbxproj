@@ -41,6 +41,7 @@
 		9DCBEAB517869A010062193D /* HF_Thread.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DCBEAB217869A000062193D /* HF_Thread.m */; };
 		9DCBEAB617869A010062193D /* HF_Sandbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DCBEAB417869A010062193D /* HF_Sandbox.m */; };
 		9DCF96C0176AFF9D00D86FAA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DCF96BF176AFF9D00D86FAA /* Foundation.framework */; };
+		9DF043A2178BB6F100301B89 /* HFNavigationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF043A1178BB6F100301B89 /* HFNavigationManager.m */; };
 		FD07CE14178B41670058344B /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = FD07CE13178B41670058344B /* NSString+Additions.m */; };
 /* End PBXBuildFile section */
 
@@ -116,6 +117,8 @@
 		9DCF96BC176AFF9D00D86FAA /* libHFramework.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libHFramework.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DCF96BF176AFF9D00D86FAA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9DCF96C3176AFF9D00D86FAA /* HFramework-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HFramework-Prefix.pch"; sourceTree = "<group>"; };
+		9DF043A0178BB6F100301B89 /* HFNavigationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFNavigationManager.h; path = Controllers/HFNavigationManager.h; sourceTree = "<group>"; };
+		9DF043A1178BB6F100301B89 /* HFNavigationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFNavigationManager.m; path = Controllers/HFNavigationManager.m; sourceTree = "<group>"; };
 		FD07CE12178B41670058344B /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
 		FD07CE13178B41670058344B /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -306,6 +309,7 @@
 			children = (
 				9DCBE98D178647A00062193D /* Additions */,
 				9DCBE9A4178647A00062193D /* Core */,
+				9DF0439F178BB6A100301B89 /* Controllers */,
 				9DCBE9A8178647A00062193D /* HF_Precompile.h */,
 				9DCBE9A9178647A00062193D /* HFramework.h */,
 				9DCBE9AA178647A00062193D /* ViewControllers */,
@@ -321,6 +325,15 @@
 				9DCF96C3176AFF9D00D86FAA /* HFramework-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9DF0439F178BB6A100301B89 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9DF043A0178BB6F100301B89 /* HFNavigationManager.h */,
+				9DF043A1178BB6F100301B89 /* HFNavigationManager.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -438,6 +451,7 @@
 				9DCBEAB517869A010062193D /* HF_Thread.m in Sources */,
 				9DCBEAB617869A010062193D /* HF_Sandbox.m in Sources */,
 				FD07CE14178B41670058344B /* NSString+Additions.m in Sources */,
+				9DF043A2178BB6F100301B89 /* HFNavigationManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
