@@ -15,10 +15,10 @@
 #define RGBA(R,G,B,A)	[UIColor colorWithRed:R/255.0f green:G/255.0f blue:B/255.0f alpha:A]
 
 #undef	HEX_RGB
-#define HEX_RGB(V)		[UIColor fromHexValue:V]
+#define HEX_RGB(V)		[UIColor fromShortHexValue:V]
 
 #undef	HEX_RGBA
-#define HEX_RGBA(V,A)	[UIColor fromHexValue:V alpha:A]
+#define HEX_RGBA(V,A)	[UIColor fromShortHexValue:V alpha:A]
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
