@@ -44,6 +44,7 @@
 		9DF043A2178BB6F100301B89 /* HFNavigationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF043A1178BB6F100301B89 /* HFNavigationManager.m */; };
 		9DF043BC178BCE1600301B89 /* UIButton+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF043BB178BCE1600301B89 /* UIButton+Additions.m */; };
 		9DF043C4178BCF6D00301B89 /* UIBarButtonItem+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF043C3178BCF6D00301B89 /* UIBarButtonItem+Additions.m */; };
+		9DF0446B178E66E900301B89 /* NSTimer+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0446A178E66E900301B89 /* NSTimer+Blocks.m */; };
 		FD07CE14178B41670058344B /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = FD07CE13178B41670058344B /* NSString+Additions.m */; };
 /* End PBXBuildFile section */
 
@@ -125,6 +126,8 @@
 		9DF043BB178BCE1600301B89 /* UIButton+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Additions.m"; sourceTree = "<group>"; };
 		9DF043C2178BCF6D00301B89 /* UIBarButtonItem+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Additions.h"; sourceTree = "<group>"; };
 		9DF043C3178BCF6D00301B89 /* UIBarButtonItem+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Additions.m"; sourceTree = "<group>"; };
+		9DF04469178E66E800301B89 /* NSTimer+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+Blocks.h"; sourceTree = "<group>"; };
+		9DF0446A178E66E900301B89 /* NSTimer+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+Blocks.m"; sourceTree = "<group>"; };
 		FD07CE12178B41670058344B /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
 		FD07CE13178B41670058344B /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -181,6 +184,8 @@
 				9DCBE99B178647A00062193D /* UIDevice+Additions.m */,
 				FD07CE12178B41670058344B /* NSString+Additions.h */,
 				FD07CE13178B41670058344B /* NSString+Additions.m */,
+				9DF04469178E66E800301B89 /* NSTimer+Blocks.h */,
+				9DF0446A178E66E900301B89 /* NSTimer+Blocks.m */,
 			);
 			path = Object;
 			sourceTree = "<group>";
@@ -464,6 +469,7 @@
 				9DF043A2178BB6F100301B89 /* HFNavigationManager.m in Sources */,
 				9DF043BC178BCE1600301B89 /* UIButton+Additions.m in Sources */,
 				9DF043C4178BCF6D00301B89 /* UIBarButtonItem+Additions.m in Sources */,
+				9DF0446B178E66E900301B89 /* NSTimer+Blocks.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
