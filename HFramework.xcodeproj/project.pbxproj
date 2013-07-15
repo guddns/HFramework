@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9D0B55C1176E90440046CEA8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D0B55C0176E90440046CEA8 /* Security.framework */; };
+		9D115F511793ABFA00C93CF8 /* NSDate+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D115F501793ABFA00C93CF8 /* NSDate+Additions.m */; };
 		9DCBE9AE178647A00062193D /* AVPlayer+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DCBE991178647A00062193D /* AVPlayer+Additions.m */; };
 		9DCBE9AF178647A00062193D /* NSDictionary+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DCBE993178647A00062193D /* NSDictionary+Additions.m */; };
 		9DCBE9B0178647A00062193D /* NSString+MD5Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DCBE995178647A00062193D /* NSString+MD5Addition.m */; };
@@ -62,6 +63,8 @@
 
 /* Begin PBXFileReference section */
 		9D0B55C0176E90440046CEA8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		9D115F4F1793ABFA00C93CF8 /* NSDate+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Additions.h"; sourceTree = "<group>"; };
+		9D115F501793ABFA00C93CF8 /* NSDate+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Additions.m"; sourceTree = "<group>"; };
 		9DCBE98E178647A00062193D /* HF_Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HF_Additions.h; sourceTree = "<group>"; };
 		9DCBE990178647A00062193D /* AVPlayer+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AVPlayer+Additions.h"; sourceTree = "<group>"; };
 		9DCBE991178647A00062193D /* AVPlayer+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AVPlayer+Additions.m"; sourceTree = "<group>"; };
@@ -186,6 +189,8 @@
 				FD07CE13178B41670058344B /* NSString+Additions.m */,
 				9DF04469178E66E800301B89 /* NSTimer+Blocks.h */,
 				9DF0446A178E66E900301B89 /* NSTimer+Blocks.m */,
+				9D115F4F1793ABFA00C93CF8 /* NSDate+Additions.h */,
+				9D115F501793ABFA00C93CF8 /* NSDate+Additions.m */,
 			);
 			path = Object;
 			sourceTree = "<group>";
@@ -470,6 +475,7 @@
 				9DF043BC178BCE1600301B89 /* UIButton+Additions.m in Sources */,
 				9DF043C4178BCF6D00301B89 /* UIBarButtonItem+Additions.m in Sources */,
 				9DF0446B178E66E900301B89 /* NSTimer+Blocks.m in Sources */,
+				9D115F511793ABFA00C93CF8 /* NSDate+Additions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
