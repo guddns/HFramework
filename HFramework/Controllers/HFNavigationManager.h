@@ -18,6 +18,8 @@ AS_SINGLETON(HFNavigationManager)
 
 - (void)pushViewControllerForClassName:(NSString *)aViewControllerClassName animated:(BOOL)animated;
 
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated;
+
 - (void)popViewControllerAnimated:(BOOL)animated;
 
 @end

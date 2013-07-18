@@ -14,14 +14,19 @@ DEF_SINGLETON(HFNavigationManager)
 
 - (void)pushViewControllerForClassName:(NSString *)aViewControllerClassName animated:(BOOL)animated
 {
-    Class targetClass = NSClassFromString(aViewControllerClassName);
-    id viewController = [[targetClass alloc] initWithNibName:aViewControllerClassName bundle:nil];
-    [_topViewController.navigationController pushViewController:(UIViewController *)viewController animated:animated];
+	Class targetClass = NSClassFromString(aViewControllerClassName);
+	id viewController = [[targetClass alloc] initWithNibName:aViewControllerClassName bundle:nil];
+	[_topViewController.navigationController pushViewController:(UIViewController *)viewController animated:animated];
+}
+
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
+{
+	[_topViewController.navigationController pushViewController:(UIViewController *)viewController animated:animated];
 }
 
 - (void)popViewControllerAnimated:(BOOL)animated
 {
-    [_topViewController.navigationController popViewControllerAnimated:animated];
+	[_topViewController.navigationController popViewControllerAnimated:animated];
 }
 
 @end
