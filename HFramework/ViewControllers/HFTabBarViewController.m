@@ -93,8 +93,8 @@
 	_onBtnImageNames  = [[NSMutableArray alloc] initWithCapacity:controllersCount];
 	
 	for (int i = 0; i < controllersCount; i++) {
-		[_onBtnImageNames addObject:[NSString stringWithFormat:@"%@_%d_on.png", prefixImageName, i+1]];
-		[_offBtnImageNames addObject:[NSString stringWithFormat:@"%@_%d_off.png", prefixImageName, i+1]];
+		[_onBtnImageNames addObject:[NSString stringWithFormat:@"%@_%02d_on.png", prefixImageName, i+1]];
+		[_offBtnImageNames addObject:[NSString stringWithFormat:@"%@_%02d_off.png", prefixImageName, i+1]];
 	}
 	
 	[self setTabBarCoverViewButtonWithType:@"new"];
