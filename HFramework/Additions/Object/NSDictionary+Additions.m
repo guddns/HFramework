@@ -7,6 +7,7 @@
 //
 
 #import "NSDictionary+Additions.h"
+#import "NSString+Additions.h"
 
 @implementation NSDictionary (Additions)
 
@@ -129,7 +130,7 @@
 	}
 	else if ( [obj isKindOfClass:[NSString class]] )
 	{
-		return (NSString *)obj;
+		return [(NSString *)obj urlDecodedString];
 	}
 	
 	return nil;
