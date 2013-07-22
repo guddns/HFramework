@@ -130,7 +130,7 @@
 	}
 	else if ( [obj isKindOfClass:[NSString class]] )
 	{
-		return [(NSString *)obj urlDecodedString];
+		return (NSString *)obj;
 	}
 	
 	return nil;
