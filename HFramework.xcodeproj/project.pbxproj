@@ -48,6 +48,7 @@
 		9DF043C4178BCF6D00301B89 /* UIBarButtonItem+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF043C3178BCF6D00301B89 /* UIBarButtonItem+Additions.m */; };
 		9DF0446B178E66E900301B89 /* NSTimer+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0446A178E66E900301B89 /* NSTimer+Blocks.m */; };
 		FD07CE14178B41670058344B /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = FD07CE13178B41670058344B /* NSString+Additions.m */; };
+		FDEB7E78179D8E91002AA415 /* NSObject+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEB7E77179D8E91002AA415 /* NSObject+Additions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -136,6 +137,8 @@
 		9DF0446A178E66E900301B89 /* NSTimer+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+Blocks.m"; sourceTree = "<group>"; };
 		FD07CE12178B41670058344B /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
 		FD07CE13178B41670058344B /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
+		FDEB7E76179D8E90002AA415 /* NSObject+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Additions.h"; sourceTree = "<group>"; };
+		FDEB7E77179D8E91002AA415 /* NSObject+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Additions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +197,8 @@
 				9DF0446A178E66E900301B89 /* NSTimer+Blocks.m */,
 				9D115F4F1793ABFA00C93CF8 /* NSDate+Additions.h */,
 				9D115F501793ABFA00C93CF8 /* NSDate+Additions.m */,
+				FDEB7E76179D8E90002AA415 /* NSObject+Additions.h */,
+				FDEB7E77179D8E91002AA415 /* NSObject+Additions.m */,
 			);
 			path = Object;
 			sourceTree = "<group>";
@@ -482,6 +487,7 @@
 				9DF0446B178E66E900301B89 /* NSTimer+Blocks.m in Sources */,
 				9D115F511793ABFA00C93CF8 /* NSDate+Additions.m in Sources */,
 				9D115F711793CF0300C93CF8 /* ATArrayView.m in Sources */,
+				FDEB7E78179D8E91002AA415 /* NSObject+Additions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
