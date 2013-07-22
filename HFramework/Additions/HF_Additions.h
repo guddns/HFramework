@@ -19,3 +19,4 @@
 #import "UIBarButtonItem+Additions.h"
 #import "NSTimer+Blocks.h"
 #import "NSDate+Additions.h"
+#import "NSObject+Additions.h"
