@@ -47,9 +47,10 @@
 {
 	_values = values;
 	[_pickerView reloadAllComponents];
-	if ([_values indexOfObject:_selectedValue] != NSNotFound) {
-		[_pickerView selectRow:[_values indexOfObject:_selectedValue] inComponent:0 animated:NO];
-	}
+	_valueLabel.text = [self.values objectAtIndex:0];
+//	if ([_values indexOfObject:_selectedValue] != NSNotFound) {
+//		[_pickerView selectRow:[_values indexOfObject:_selectedValue] inComponent:0 animated:NO];
+//	}
 }
 
 - (void)setSelectedValue:(NSString *)selectedValue
