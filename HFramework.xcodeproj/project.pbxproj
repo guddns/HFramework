@@ -11,6 +11,7 @@
 		9D115F511793ABFA00C93CF8 /* NSDate+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D115F501793ABFA00C93CF8 /* NSDate+Additions.m */; };
 		9D115F711793CF0300C93CF8 /* ATArrayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D115F701793CF0300C93CF8 /* ATArrayView.m */; };
 		9D9895C417A8D84E00BAC77A /* HInputAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D9895C317A8D84D00BAC77A /* HInputAccessoryView.m */; };
+		9D9895DA17A8EC9600BAC77A /* HComboBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D9895D917A8EC9500BAC77A /* HComboBox.m */; };
 		9DCBE9AE178647A00062193D /* AVPlayer+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DCBE991178647A00062193D /* AVPlayer+Additions.m */; };
 		9DCBE9AF178647A00062193D /* NSDictionary+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DCBE993178647A00062193D /* NSDictionary+Additions.m */; };
 		9DCBE9B0178647A00062193D /* NSString+MD5Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DCBE995178647A00062193D /* NSString+MD5Addition.m */; };
@@ -72,6 +73,8 @@
 		9D115F701793CF0300C93CF8 /* ATArrayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATArrayView.m; sourceTree = "<group>"; };
 		9D9895C217A8D84D00BAC77A /* HInputAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HInputAccessoryView.h; sourceTree = "<group>"; };
 		9D9895C317A8D84D00BAC77A /* HInputAccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HInputAccessoryView.m; sourceTree = "<group>"; };
+		9D9895D817A8EC9500BAC77A /* HComboBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HComboBox.h; sourceTree = "<group>"; };
+		9D9895D917A8EC9500BAC77A /* HComboBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HComboBox.m; sourceTree = "<group>"; };
 		9DCBE98E178647A00062193D /* HF_Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HF_Additions.h; sourceTree = "<group>"; };
 		9DCBE990178647A00062193D /* AVPlayer+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AVPlayer+Additions.h"; sourceTree = "<group>"; };
 		9DCBE991178647A00062193D /* AVPlayer+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AVPlayer+Additions.m"; sourceTree = "<group>"; };
@@ -264,6 +267,8 @@
 				9D115F701793CF0300C93CF8 /* ATArrayView.m */,
 				9D9895C217A8D84D00BAC77A /* HInputAccessoryView.h */,
 				9D9895C317A8D84D00BAC77A /* HInputAccessoryView.m */,
+				9D9895D817A8EC9500BAC77A /* HComboBox.h */,
+				9D9895D917A8EC9500BAC77A /* HComboBox.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -494,6 +499,7 @@
 				9D115F711793CF0300C93CF8 /* ATArrayView.m in Sources */,
 				FDEB7E78179D8E91002AA415 /* NSObject+Additions.m in Sources */,
 				9D9895C417A8D84E00BAC77A /* HInputAccessoryView.m in Sources */,
+				9D9895DA17A8EC9600BAC77A /* HComboBox.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
