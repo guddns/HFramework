@@ -19,6 +19,17 @@
     return self;
 }
 
+- (id)initWithBackgroundImage:(NSString *)imageName
+{
+	UIImage *image = [UIImage imageNamed:imageName];
+	self = [self initWithFrame:CGRectMake(0, 0, image.size.width, image.size.height)];
+	if (self) {
+		UIImageView *backView = [[UIImageView alloc] initWithImage:image];
+		[self insertSubview:backView atIndex:0];
+	}
+	return self;
+}
+
 - (void)initialize {
 	_valueLabel = [[UILabel alloc] initWithFrame:self.bounds];
 	_valueLabel.backgroundColor = [UIColor clearColor];
@@ -69,6 +80,8 @@
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
+	_selectedRow = row;
+	_valueLabel.text = [self.values objectAtIndex:row];
 	if ([_delegate respondsToSelector:@selector(comboBox:didChangedToValue:)]) {
 		[_delegate comboBox:self didChangedToValue:[self.values objectAtIndex:row]];
 	}

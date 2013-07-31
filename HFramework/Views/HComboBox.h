@@ -15,11 +15,14 @@
 @property (nonatomic, strong) UILabel *valueLabel;
 @property (nonatomic, strong) UIPickerView *pickerView;
 @property (nonatomic, strong) NSArray *values;
+@property (nonatomic, assign) NSInteger selectedRow;
 @property (nonatomic, strong) NSString *selectedValue;
 @property (nonatomic, weak) id<HComboBoxDelegate> delegate;
 
 @property (readwrite, strong) UIView *inputView;
 @property (readwrite, strong) UIView *inputAccessoryView;
+
+- (id)initWithBackgroundImage:(NSString *)imageName;
 
 @end
 
