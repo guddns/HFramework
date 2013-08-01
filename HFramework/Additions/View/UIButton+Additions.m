@@ -10,6 +10,14 @@
 
 @implementation UIButton (Additions)
 
++ (UIButton *)buttonWithImageNamed:(NSString *)name
+{
+	UIButton *btn = [[UIButton alloc] init];
+	[btn setImage:[UIImage imageNamed:name] forState:UIControlStateNormal];
+	[btn sizeToFit];
+	return btn;
+}
+
 + (UIButton *)createWithImage:(UIImage *)nImg delegate:(id)delegate action:(SEL)action
 {
 	UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, nImg.size.width, nImg.size.height)];

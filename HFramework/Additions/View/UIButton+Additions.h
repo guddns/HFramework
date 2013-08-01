@@ -10,6 +10,8 @@
 
 @interface UIButton (Additions)
 
++ (UIButton *)buttonWithImageNamed:(NSString *)name;
+
 + (UIButton *)createWithImage:(UIImage *)nImg delegate:(id)delegate action:(SEL)action;
 
 + (UIButton *)createWithImage:(UIImage *)nImg highlightImage:(UIImage *)hImg delegate:(id)delegate action:(SEL)action;

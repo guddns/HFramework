@@ -21,6 +21,8 @@ typedef void (^CancelBlock)();
 @property (copy, nonatomic) DismissBlock dismissBlock;
 @property (copy, nonatomic) CancelBlock cancelBlock;
 
++ (UIAlertView *)alertViewWithMessage:(NSString *)message;
+
 + (UIAlertView *)alertViewWithTitle:(NSString *)title
 							message:(NSString *)message;
 

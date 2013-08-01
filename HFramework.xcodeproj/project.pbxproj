@@ -10,6 +10,7 @@
 		9D0B55C1176E90440046CEA8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D0B55C0176E90440046CEA8 /* Security.framework */; };
 		9D115F511793ABFA00C93CF8 /* NSDate+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D115F501793ABFA00C93CF8 /* NSDate+Additions.m */; };
 		9D115F711793CF0300C93CF8 /* ATArrayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D115F701793CF0300C93CF8 /* ATArrayView.m */; };
+		9D37BF9F17AA375400F7BF9C /* UIImage+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D37BF9E17AA375300F7BF9C /* UIImage+Additions.m */; };
 		9D9895C417A8D84E00BAC77A /* HInputAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D9895C317A8D84D00BAC77A /* HInputAccessoryView.m */; };
 		9D9895DA17A8EC9600BAC77A /* HComboBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D9895D917A8EC9500BAC77A /* HComboBox.m */; };
 		9DCBE9AE178647A00062193D /* AVPlayer+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DCBE991178647A00062193D /* AVPlayer+Additions.m */; };
@@ -71,6 +72,8 @@
 		9D115F501793ABFA00C93CF8 /* NSDate+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Additions.m"; sourceTree = "<group>"; };
 		9D115F6F1793CF0300C93CF8 /* ATArrayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATArrayView.h; sourceTree = "<group>"; };
 		9D115F701793CF0300C93CF8 /* ATArrayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATArrayView.m; sourceTree = "<group>"; };
+		9D37BF9D17AA375300F7BF9C /* UIImage+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Additions.h"; sourceTree = "<group>"; };
+		9D37BF9E17AA375300F7BF9C /* UIImage+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Additions.m"; sourceTree = "<group>"; };
 		9D9895C217A8D84D00BAC77A /* HInputAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HInputAccessoryView.h; sourceTree = "<group>"; };
 		9D9895C317A8D84D00BAC77A /* HInputAccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HInputAccessoryView.m; sourceTree = "<group>"; };
 		9D9895D817A8EC9500BAC77A /* HComboBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HComboBox.h; sourceTree = "<group>"; };
@@ -222,6 +225,8 @@
 				9DF043BB178BCE1600301B89 /* UIButton+Additions.m */,
 				9DF043C2178BCF6D00301B89 /* UIBarButtonItem+Additions.h */,
 				9DF043C3178BCF6D00301B89 /* UIBarButtonItem+Additions.m */,
+				9D37BF9D17AA375300F7BF9C /* UIImage+Additions.h */,
+				9D37BF9E17AA375300F7BF9C /* UIImage+Additions.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -500,6 +505,7 @@
 				FDEB7E78179D8E91002AA415 /* NSObject+Additions.m in Sources */,
 				9D9895C417A8D84E00BAC77A /* HInputAccessoryView.m in Sources */,
 				9D9895DA17A8EC9600BAC77A /* HComboBox.m in Sources */,
+				9D37BF9F17AA375400F7BF9C /* UIImage+Additions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

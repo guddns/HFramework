@@ -39,6 +39,13 @@ static char CANCEL_IDENTIFIER;
 	objc_setAssociatedObject(self, &CANCEL_IDENTIFIER, cancelBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
++ (UIAlertView *)alertViewWithMessage:(NSString *)message
+{
+	return [UIAlertView alertViewWithTitle:nil
+								   message:message
+						 cancelButtonTitle:NSLocalizedString(@"확인", @"")];
+}
+
 + (UIAlertView *)alertViewWithTitle:(NSString *)title
 							message:(NSString *)message {
 	return [UIAlertView alertViewWithTitle:title
