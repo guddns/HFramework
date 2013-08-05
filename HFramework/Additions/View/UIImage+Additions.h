@@ -10,8 +10,8 @@
 
 @interface UIImage (Additions)
 
-+ (UIImage *)imageNamedH568:(NSString *)imageName;
-
-+ (UIImage *)retina4ImageNamed:(NSString *)imageName;
+//+ (UIImage *)imageNamedH568:(NSString *)imageName;
+//
+//+ (UIImage *)retina4ImageNamed:(NSString *)imageName;
 
 @end
