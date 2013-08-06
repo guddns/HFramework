@@ -7,10 +7,7 @@
 //
 
 #import "UIImage+Additions.h"
-#import <Foundation/Foundation.h>
 #import <objc/runtime.h>
-
-//static Method origImageNamedMethod = nil;
 
 @implementation UIImage (Additions)
 

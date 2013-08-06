@@ -8,6 +8,12 @@
 
 #import "HInputAccessoryView.h"
 
+static NSString * UIKitLocalizedString(NSString *string)
+{
+	NSBundle *UIKitBundle = [NSBundle bundleForClass:[UIApplication class]];
+	return UIKitBundle ? [UIKitBundle localizedStringForKey:string value:string table:nil] : string;
+}
+
 static NSArray * EditableTextInputsInView(UIView *view)
 {
 	NSMutableArray *textInputs = [NSMutableArray new];
@@ -31,9 +37,18 @@ static NSArray * EditableTextInputsInView(UIView *view)
 
 @implementation HInputAccessoryView
 
+- (id)init
+{
+	self = [super init];
+	if (self) {
+		
+	}
+	return self;
+}
+
 - (id)initWithFrame:(CGRect)frame
 {
-	self = [super initWithFrame:frame];
+	self = [self initWithResponders:nil];
 	if (self) {
 		
 	}
@@ -61,6 +76,8 @@ static NSArray * EditableTextInputsInView(UIView *view)
 		_toolbar.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 		_toolbar.items = @[segmentedControlBarButtonItem, flexibleSpace];
 		[self addSubview:_toolbar];
+		
+		[self setHasDoneButton:YES];
 		
 		self.frame = _toolbar.frame = (CGRect){CGPointZero, [_toolbar sizeThatFits:CGSizeZero]};
 		
@@ -111,12 +128,20 @@ static NSArray * EditableTextInputsInView(UIView *view)
 	[segmentedControl setEnabled:!isLast forSegmentAtIndex:1];
 }
 
-- (void)textInputDidBeginEditing:(NSNotification *)notification
+- (void) willMoveToWindow:(UIWindow *)window
+{
+	if (!window)
+		return;
+	
+	[self updateSegmentedControl];
+}
+
+- (void) textInputDidBeginEditing:(NSNotification *)notification
 {
 	[self updateSegmentedControl];
 }
 
-- (NSArray *)responders
+- (NSArray *) responders
 {
 	if (_responders)
 		return _responders;
@@ -137,7 +162,7 @@ static NSArray * EditableTextInputsInView(UIView *view)
 
 #pragma mark - Actions
 
-- (void)selectAdjacentResponder:(UISegmentedControl *)sender
+- (void) selectAdjacentResponder:(UISegmentedControl *)sender
 {
 	NSArray *firstResponders = [self.responders filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(UIResponder *responder, NSDictionary *bindings) {
 		return [responder isFirstResponder];
@@ -152,9 +177,10 @@ static NSArray * EditableTextInputsInView(UIView *view)
 		adjacentResponder = [self.responders objectAtIndex:adjacentResponderIndex];
 	
 	[adjacentResponder becomeFirstResponder];
+	[self updateSegmentedControl];
 }
 
-- (void)doneBtnTapped:(id)sender
+- (void) doneBtnTapped:(id)sender
 {
 	[[UIApplication sharedApplication] sendAction:@selector(resignFirstResponder) to:nil from:nil forEvent:nil];
 }

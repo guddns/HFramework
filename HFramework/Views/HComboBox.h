@@ -12,15 +12,12 @@
 
 @interface HComboBox : UIControl <UIPickerViewDelegate, UIPickerViewDataSource>
 
-@property (nonatomic, strong) UILabel *valueLabel;
-@property (nonatomic, strong) UIPickerView *pickerView;
-@property (nonatomic, strong) NSArray *values;
+@property (nonatomic, strong) UILabel *textLabel;
+@property (nonatomic, assign) NSInteger leftInset;
+@property (nonatomic, strong) NSArray *items;
 @property (nonatomic, assign) NSInteger selectedRow;
-@property (nonatomic, strong) NSString *selectedValue;
+@property (nonatomic, strong) NSString *selectedItem;
 @property (nonatomic, weak) id<HComboBoxDelegate> delegate;
-
-@property (readwrite, strong) UIView *inputView;
-@property (readwrite, strong) UIView *inputAccessoryView;
 
 - (id)initWithBackgroundImage:(NSString *)imageName;
 

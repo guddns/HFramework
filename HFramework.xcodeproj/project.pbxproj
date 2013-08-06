@@ -11,6 +11,8 @@
 		9D115F511793ABFA00C93CF8 /* NSDate+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D115F501793ABFA00C93CF8 /* NSDate+Additions.m */; };
 		9D115F711793CF0300C93CF8 /* ATArrayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D115F701793CF0300C93CF8 /* ATArrayView.m */; };
 		9D37BF9F17AA375400F7BF9C /* UIImage+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D37BF9E17AA375300F7BF9C /* UIImage+Additions.m */; };
+		9D37C48917AF9A8200F7BF9C /* select_box_car_use.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D37C48817AF9A8200F7BF9C /* select_box_car_use.png */; };
+		9D37C48C17B06DEB00F7BF9C /* UIViewController+Is4Inch.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D37C48B17B06DEB00F7BF9C /* UIViewController+Is4Inch.m */; };
 		9D9895C417A8D84E00BAC77A /* HInputAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D9895C317A8D84D00BAC77A /* HInputAccessoryView.m */; };
 		9D9895DA17A8EC9600BAC77A /* HComboBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D9895D917A8EC9500BAC77A /* HComboBox.m */; };
 		9DCBE9AE178647A00062193D /* AVPlayer+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DCBE991178647A00062193D /* AVPlayer+Additions.m */; };
@@ -74,6 +76,9 @@
 		9D115F701793CF0300C93CF8 /* ATArrayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATArrayView.m; sourceTree = "<group>"; };
 		9D37BF9D17AA375300F7BF9C /* UIImage+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Additions.h"; sourceTree = "<group>"; };
 		9D37BF9E17AA375300F7BF9C /* UIImage+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Additions.m"; sourceTree = "<group>"; };
+		9D37C48817AF9A8200F7BF9C /* select_box_car_use.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = select_box_car_use.png; sourceTree = "<group>"; };
+		9D37C48A17B06DEB00F7BF9C /* UIViewController+Is4Inch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Is4Inch.h"; sourceTree = "<group>"; };
+		9D37C48B17B06DEB00F7BF9C /* UIViewController+Is4Inch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Is4Inch.m"; sourceTree = "<group>"; };
 		9D9895C217A8D84D00BAC77A /* HInputAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HInputAccessoryView.h; sourceTree = "<group>"; };
 		9D9895C317A8D84D00BAC77A /* HInputAccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HInputAccessoryView.m; sourceTree = "<group>"; };
 		9D9895D817A8EC9500BAC77A /* HComboBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HComboBox.h; sourceTree = "<group>"; };
@@ -234,6 +239,8 @@
 		9DCBE9A3178647A00062193D /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				9D37C48A17B06DEB00F7BF9C /* UIViewController+Is4Inch.h */,
+				9D37C48B17B06DEB00F7BF9C /* UIViewController+Is4Inch.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -309,6 +316,7 @@
 		9DCBEA80178666F10062193D /* images */ = {
 			isa = PBXGroup;
 			children = (
+				9D37C48817AF9A8200F7BF9C /* select_box_car_use.png */,
 				9DCBEA81178666F10062193D /* navbar@2x.png */,
 				9DCBEA82178666F10062193D /* tab_1_off.png */,
 				9DCBEA83178666F10062193D /* tab_1_on.png */,
@@ -461,6 +469,7 @@
 				9DCBEA98178666F10062193D /* tab_2_off.png in Resources */,
 				9DCBEA99178666F10062193D /* tab_2_on.png in Resources */,
 				9DCBEA9A178666F10062193D /* tacbbg.png in Resources */,
+				9D37C48917AF9A8200F7BF9C /* select_box_car_use.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,6 +515,7 @@
 				9D9895C417A8D84E00BAC77A /* HInputAccessoryView.m in Sources */,
 				9D9895DA17A8EC9600BAC77A /* HComboBox.m in Sources */,
 				9D37BF9F17AA375400F7BF9C /* UIImage+Additions.m in Sources */,
+				9D37C48C17B06DEB00F7BF9C /* UIViewController+Is4Inch.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

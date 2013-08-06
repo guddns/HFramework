@@ -7,6 +7,14 @@
 //
 
 #import "HComboBox.h"
+#import "HF_Additions.h"
+
+@interface HComboBox ()
+
+@property (nonatomic, strong) UIPickerView *pickerView;
+@property (readwrite, strong) UIView *inputView;
+
+@end
 
 @implementation HComboBox
 
@@ -15,6 +23,7 @@
     self = [super initWithFrame:frame];
     if (self) {
 		[self initialize];
+		self.leftInset = 5;
     }
     return self;
 }
@@ -31,36 +40,59 @@
 }
 
 - (void)initialize {
-	_valueLabel = [[UILabel alloc] initWithFrame:self.bounds];
-	_valueLabel.backgroundColor = [UIColor clearColor];
-	_valueLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-	[self addSubview:_valueLabel];
+	_textLabel = [[UILabel alloc] initWithFrame:self.bounds];
+	_textLabel.backgroundColor = [UIColor clearColor];
+	_textLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+	[self addSubview:_textLabel];
 	
 	_pickerView = [[UIPickerView alloc] init];
-	_pickerView.showsSelectionIndicator = YES;
+	_pickerView.showsSelectionIndicator = NO;
 	_pickerView.dataSource = self;
 	_pickerView.delegate = self;
+	_pickerView.exclusiveTouch = NO;
 	self.inputView = _pickerView;
 }
 
-- (void)setValues:(NSArray *)values
+- (void)setLeftInset:(NSInteger)leftInset
 {
-	_values = values;
+	_leftInset = leftInset;
+	_textLabel.frame = CGRectMake(_leftInset, 0, self.width - _leftInset, self.height);
+}
+
+- (void)setItems:(NSArray *)items
+{
+	_items = items;
 	[_pickerView reloadAllComponents];
-	_valueLabel.text = [self.values objectAtIndex:0];
-//	if ([_values indexOfObject:_selectedValue] != NSNotFound) {
-//		[_pickerView selectRow:[_values indexOfObject:_selectedValue] inComponent:0 animated:NO];
-//	}
+	_textLabel.text = [self.items objectAtIndex:0];
 }
 
 - (void)setSelectedValue:(NSString *)selectedValue
 {
-	_selectedValue = selectedValue;
-	if ([_values indexOfObject:selectedValue] != NSNotFound) {
-		[_pickerView selectRow:[_values indexOfObject:selectedValue] inComponent:0 animated:NO];
+	_selectedItem = selectedValue;
+	if ([_items indexOfObject:selectedValue] != NSNotFound) {
+		[_pickerView selectRow:[_items indexOfObject:selectedValue] inComponent:0 animated:NO];
 	}
 }
 
+- (UIView *)inputAccessoryView
+{
+	return [self.viewController inputAccessoryView];
+}
+
+
+- (void)toggleSelection:(UITapGestureRecognizer *)recognizer {
+	UITableViewCell *selectedCell = (UITableViewCell *) recognizer.view;
+	_selectedRow = selectedCell.tag;
+	
+	for (int i = 0; i < [_pickerView numberOfRowsInComponent:0]; i++) {
+		UITableViewCell *cell = (UITableViewCell *)[_pickerView viewForRow:i forComponent:0];
+		cell.accessoryType = UITableViewCellAccessoryNone;
+	}
+	
+	[selectedCell setAccessoryType:UITableViewCellAccessoryCheckmark];
+	
+	[_pickerView selectRow:_selectedRow inComponent:0 animated:YES];
+}
 
 #pragma mark - UIPickerView DataSource, Delegate
 
@@ -71,30 +103,54 @@
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
-	return [self.values count];
+	return [self.items count];
 }
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
-	return [self.values objectAtIndex:row];
+	return [self.items objectAtIndex:row];
+}
+
+- (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view {
+	UITableViewCell *cell = (UITableViewCell *)view;
+	if (cell == nil) {
+		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+		[cell setBounds:CGRectMake(0, 0, cell.frame.size.width - 20, 44)];
+		[cell setBackgroundColor:[UIColor clearColor]];
+
+		UITapGestureRecognizer * singleTapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(toggleSelection:)];
+		singleTapGestureRecognizer.numberOfTapsRequired = 1;
+		[cell addGestureRecognizer:singleTapGestureRecognizer];
+	}
+	
+	cell.tag = row;
+	
+	//	if ([selectedItems indexOfObject:[NSNumber numberWithInt:row]] != NSNotFound) {
+	//		[cell setAccessoryType:UITableViewCellAccessoryCheckmark];
+	//	} else {
+	//		[cell setAccessoryType:UITableViewCellAccessoryNone];
+	//	}
+	
+	cell.textLabel.text = [_items objectAtIndex:row];
+	
+	return cell;
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
-	_selectedRow = row;
-	_valueLabel.text = [self.values objectAtIndex:row];
-	if ([_delegate respondsToSelector:@selector(comboBox:didChangedToValue:)]) {
-		[_delegate comboBox:self didChangedToValue:[self.values objectAtIndex:row]];
-	}
+	//	_selectedRow = row;
+	//	_textLabel.text = [self.values objectAtIndex:row];
+	//	if ([_delegate respondsToSelector:@selector(comboBox:didChangedToValue:)]) {
+	//		[_delegate comboBox:self didChangedToValue:[self.values objectAtIndex:row]];
+	//	}
 }
 
 
 #pragma mark - Responder
 
-- (BOOL)beginTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event {
-    [super beginTrackingWithTouch:touch withEvent:event];
-    [self becomeFirstResponder];
-    return NO;
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+	[self becomeFirstResponder];
 }
 
 - (BOOL)canBecomeFirstResponder {
