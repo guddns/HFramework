@@ -44,11 +44,50 @@
 	[self.view addSubview:_nameField];
 	
 	_inputAccessoryView = [[HInputAccessoryView alloc] initWithResponders:@[_nameField, _comboBox]];
+	
+	_tableView.editing = YES;
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+	return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+	return 3;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"tototo"];
+	if (cell == nil) {
+		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"tototo"];
+		UIView *aView = [[UIView alloc] initWithFrame:cell.bounds];
+		aView.backgroundColor = [UIColor redColor];
+		[cell.contentView addSubview:aView];
+	}
+	
+//	cell.textLabel.text = @"test";
+	
+	return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	UITableViewCell *selectedCell = [tableView cellForRowAtIndexPath:indexPath];
+	NSLog(@"%i", selectedCell.selected);
+}
+
+- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	UITableViewCell *selectedCell = [tableView cellForRowAtIndexPath:indexPath];
+	NSLog(@"%i", selectedCell.selected);
 }
 
 @end
