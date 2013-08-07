@@ -15,17 +15,22 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-	self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
+
+	if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+	    self.viewController = [[ViewController alloc] initWithNibName:@"ViewController_iPhone" bundle:nil];
+	} else {
+	    self.viewController = [[ViewController alloc] initWithNibName:@"ViewController_iPad" bundle:nil];
+	}
+
 	
-	_tabBarViewController = [[HFTabBarViewController alloc] init];
+//	_tabBarViewController = [[HFTabBarViewController alloc] init];
+//	
+//	UIViewController *vv = [[UIViewController alloc] init];
+//	
+//	_tabBarViewController.viewControllers = [NSArray arrayWithObjects:self.viewController, vv, nil];
+//	[_tabBarViewController setTabBarCoverViewWithPrefixImageName:@"tab"];
 	
-	UIViewController *vv = [[UIViewController alloc] init];
-	
-	_tabBarViewController.viewControllers = [NSArray arrayWithObjects:self.viewController, vv, nil];
-	[_tabBarViewController setTabBarCoverViewWithPrefixImageName:@"tab"];
-	
-	self.window.rootViewController = _tabBarViewController;
+	self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     return YES;
 }

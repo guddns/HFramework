@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "HComboBox.h"
 #import "HInputAccessoryView.h"
+#import "TestCell.h"
 
 @interface ViewController ()
 
@@ -45,6 +46,9 @@
 	
 	_inputAccessoryView = [[HInputAccessoryView alloc] initWithResponders:@[_nameField, _comboBox]];
 	
+	_tableView.allowsMultipleSelectionDuringEditing = YES;
+//	_tableView.allowsMultipleSelection = YES;
+	_tableView.rowHeight = 50;
 	_tableView.editing = YES;
 }
 
@@ -63,15 +67,25 @@
 	return 3;
 }
 
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if(indexPath.row == 0) {
+        return UITableViewCellEditingStyleDelete;
+    } else {
+        return UITableViewCellEditingStyleNone;
+    }
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"tototo"];
+	TestCell *cell = [tableView dequeueReusableCellWithIdentifier:@"tototo"];
 	if (cell == nil) {
-		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"tototo"];
-		UIView *aView = [[UIView alloc] initWithFrame:cell.bounds];
-		aView.backgroundColor = [UIColor redColor];
+		cell = [[TestCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"tototo"];
+		UILabel *aView = [[UILabel alloc] initWithFrame:cell.bounds];
+		aView.text = @"TEST";
 		[cell.contentView addSubview:aView];
 	}
+	
+	cell.multipleSelectionBackgroundView = [[UIImageView alloc] init];
 	
 //	cell.textLabel.text = @"test";
 	

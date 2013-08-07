@@ -36,7 +36,7 @@
 		9DCBE9D2178661350062193D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DCBE9D1178661350062193D /* Default@2x.png */; };
 		9DCBE9D4178661350062193D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DCBE9D3178661350062193D /* Default-568h@2x.png */; };
 		9DCBE9D7178661350062193D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DCBE9D6178661350062193D /* ViewController.m */; };
-		9DCBE9DA178661350062193D /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DCBE9D8178661350062193D /* ViewController.xib */; };
+		9DCBE9DA178661350062193D /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DCBE9D8178661350062193D /* ViewController_iPhone.xib */; };
 		9DCBE9DE178661500062193D /* libHFramework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DCF96BC176AFF9D00D86FAA /* libHFramework.a */; };
 		9DCBEA95178666F10062193D /* navbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DCBEA81178666F10062193D /* navbar@2x.png */; };
 		9DCBEA96178666F10062193D /* tab_1_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DCBEA82178666F10062193D /* tab_1_off.png */; };
@@ -48,6 +48,8 @@
 		9DCBEAB517869A010062193D /* HF_Thread.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DCBEAB217869A000062193D /* HF_Thread.m */; };
 		9DCBEAB617869A010062193D /* HF_Sandbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DCBEAB417869A010062193D /* HF_Sandbox.m */; };
 		9DCF96C0176AFF9D00D86FAA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DCF96BF176AFF9D00D86FAA /* Foundation.framework */; };
+		9DEA20DB17B1BCCB004A897A /* TestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DEA20DA17B1BCCB004A897A /* TestCell.m */; };
+		9DEA20DF17B1FB91004A897A /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DEA20DE17B1FB91004A897A /* ViewController_iPad.xib */; };
 		9DF043A2178BB6F100301B89 /* HFNavigationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF043A1178BB6F100301B89 /* HFNavigationManager.m */; };
 		9DF043BC178BCE1600301B89 /* UIButton+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF043BB178BCE1600301B89 /* UIButton+Additions.m */; };
 		9DF043C4178BCF6D00301B89 /* UIBarButtonItem+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF043C3178BCF6D00301B89 /* UIBarButtonItem+Additions.m */; };
@@ -123,7 +125,7 @@
 		9DCBE9D3178661350062193D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		9DCBE9D5178661350062193D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		9DCBE9D6178661350062193D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		9DCBE9D9178661350062193D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		9DCBE9D9178661350062193D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
 		9DCBE9DF178662290062193D /* HF_ViewControllers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HF_ViewControllers.h; sourceTree = "<group>"; };
 		9DCBEA81178666F10062193D /* navbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navbar@2x.png"; sourceTree = "<group>"; };
 		9DCBEA82178666F10062193D /* tab_1_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_1_off.png; sourceTree = "<group>"; };
@@ -141,6 +143,9 @@
 		9DCF96BC176AFF9D00D86FAA /* libHFramework.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libHFramework.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DCF96BF176AFF9D00D86FAA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9DCF96C3176AFF9D00D86FAA /* HFramework-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HFramework-Prefix.pch"; sourceTree = "<group>"; };
+		9DEA20D917B1BCCB004A897A /* TestCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCell.h; sourceTree = "<group>"; };
+		9DEA20DA17B1BCCB004A897A /* TestCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestCell.m; sourceTree = "<group>"; };
+		9DEA20DE17B1FB91004A897A /* ViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController_iPad.xib; sourceTree = "<group>"; };
 		9DF043A0178BB6F100301B89 /* HFNavigationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFNavigationManager.h; path = Controllers/HFNavigationManager.h; sourceTree = "<group>"; };
 		9DF043A1178BB6F100301B89 /* HFNavigationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFNavigationManager.m; path = Controllers/HFNavigationManager.m; sourceTree = "<group>"; };
 		9DF043BA178BCE1600301B89 /* UIButton+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Additions.h"; sourceTree = "<group>"; };
@@ -292,8 +297,11 @@
 				9DCBE9CD178661350062193D /* AppDelegate.m */,
 				9DCBE9D5178661350062193D /* ViewController.h */,
 				9DCBE9D6178661350062193D /* ViewController.m */,
-				9DCBE9D8178661350062193D /* ViewController.xib */,
+				9DCBE9D8178661350062193D /* ViewController_iPhone.xib */,
+				9DEA20DE17B1FB91004A897A /* ViewController_iPad.xib */,
 				9DCBE9C4178661350062193D /* Supporting Files */,
+				9DEA20D917B1BCCB004A897A /* TestCell.h */,
+				9DEA20DA17B1BCCB004A897A /* TestCell.m */,
 			);
 			path = HFrameworkSample;
 			sourceTree = "<group>";
@@ -462,7 +470,7 @@
 				9DCBE9D0178661350062193D /* Default.png in Resources */,
 				9DCBE9D2178661350062193D /* Default@2x.png in Resources */,
 				9DCBE9D4178661350062193D /* Default-568h@2x.png in Resources */,
-				9DCBE9DA178661350062193D /* ViewController.xib in Resources */,
+				9DCBE9DA178661350062193D /* ViewController_iPhone.xib in Resources */,
 				9DCBEA95178666F10062193D /* navbar@2x.png in Resources */,
 				9DCBEA96178666F10062193D /* tab_1_off.png in Resources */,
 				9DCBEA97178666F10062193D /* tab_1_on.png in Resources */,
@@ -470,6 +478,7 @@
 				9DCBEA99178666F10062193D /* tab_2_on.png in Resources */,
 				9DCBEA9A178666F10062193D /* tacbbg.png in Resources */,
 				9D37C48917AF9A8200F7BF9C /* select_box_car_use.png in Resources */,
+				9DEA20DF17B1FB91004A897A /* ViewController_iPad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +493,7 @@
 				9DCBE9CA178661350062193D /* main.m in Sources */,
 				9DCBE9CE178661350062193D /* AppDelegate.m in Sources */,
 				9DCBE9D7178661350062193D /* ViewController.m in Sources */,
+				9DEA20DB17B1BCCB004A897A /* TestCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,12 +540,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		9DCBE9D8178661350062193D /* ViewController.xib */ = {
+		9DCBE9D8178661350062193D /* ViewController_iPhone.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				9DCBE9D9178661350062193D /* en */,
 			);
-			name = ViewController.xib;
+			name = ViewController_iPhone.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -551,6 +561,7 @@
 				INFOPLIST_FILE = "HFrameworkSample/HFrameworkSample-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -567,6 +578,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
 			};
