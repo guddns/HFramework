@@ -10,6 +10,7 @@
 #import "HComboBox.h"
 #import "HInputAccessoryView.h"
 #import "TestCell.h"
+#import "HModal.h"
 
 @interface ViewController ()
 
@@ -50,6 +51,8 @@
 //	_tableView.allowsMultipleSelection = YES;
 	_tableView.rowHeight = 50;
 	_tableView.editing = YES;
+	
+	
 }
 
 - (void)didReceiveMemoryWarning
@@ -102,6 +105,11 @@
 {
 	UITableViewCell *selectedCell = [tableView cellForRowAtIndexPath:indexPath];
 	NSLog(@"%i", selectedCell.selected);
+}
+
+- (void)modalTest:(id)sender
+{
+	[[HModal sharedInstance] showWithContentView:_comboBox];	
 }
 
 @end

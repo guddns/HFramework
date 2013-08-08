@@ -12,4 +12,6 @@
 
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
 
+- (IBAction)modalTest:(id)sender;
+
 @end
