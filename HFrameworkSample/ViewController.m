@@ -47,12 +47,12 @@
 	
 	_inputAccessoryView = [[HInputAccessoryView alloc] initWithResponders:@[_nameField, _comboBox]];
 	
-	_tableView.allowsMultipleSelectionDuringEditing = YES;
-//	_tableView.allowsMultipleSelection = YES;
-	_tableView.rowHeight = 50;
-	_tableView.editing = YES;
+//	_tableView.allowsMultipleSelectionDuringEditing = YES;
+////	_tableView.allowsMultipleSelection = YES;
+//	_tableView.rowHeight = 50;
+//	_tableView.editing = YES;
 	
-	
+	_scrollView.contentSize = CGSizeMake(200, 600);
 }
 
 - (void)didReceiveMemoryWarning
