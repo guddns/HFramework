@@ -7,10 +7,12 @@
 //
 
 #import "ViewController.h"
+#import "HFramework.h"
 #import "HComboBox.h"
 #import "HInputAccessoryView.h"
 #import "TestCell.h"
 #import "HModal.h"
+#import <MapKit/MapKit.h>
 
 @interface ViewController ()
 
@@ -53,6 +55,33 @@
 //	_tableView.editing = YES;
 	
 	_scrollView.contentSize = CGSizeMake(200, 600);
+	
+	MKMapView *mapView = [[MKMapView alloc] initWithFrame:self.view.bounds];
+	mapView.showsUserLocation = YES;
+	mapView.delegate = self;
+	
+	MKCoordinateRegion region;
+	MKCoordinateSpan span;
+	span.latitudeDelta = 0.12;
+	span.longitudeDelta = 0.12;
+	
+	CLLocationCoordinate2D location = mapView.userLocation.coordinate;
+	location.latitude = 37.514849;
+    location.longitude = 126.954063;
+	
+	region.span = span;
+	region.center = location;
+	
+	[mapView setRegion:region animated:YES];
+	[mapView regionThatFits:region];
+	
+	MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
+    point.coordinate = mapView.userLocation.coordinate;
+    point.title = @"Where am I?";
+    point.subtitle = @"I'm here!!!";
+	[mapView addAnnotation:point];
+	
+	[self.view addSubview:mapView];
 }
 
 - (void)didReceiveMemoryWarning
@@ -111,5 +140,36 @@
 {
 	[[HModal sharedInstance] showWithContentView:_comboBox];	
 }
+
+- (MKAnnotationView *)mapView:(MKMapView *)map viewForAnnotation:(id <MKAnnotation>)annotation
+{
+    static NSString *annotationViewReuseIdentifier = @"annotationViewReuseIdentifier";
+	
+    MKAnnotationView *annotationView = (MKAnnotationView *)[map dequeueReusableAnnotationViewWithIdentifier:annotationViewReuseIdentifier];
+    if (annotationView == nil)
+    {
+        annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:annotationViewReuseIdentifier];
+    }
+	
+    annotationView.image = [UIImage imageNamed:@"tab_1_on.png"];
+    annotationView.annotation = annotation;
+	
+    return annotationView;
+}
+
+- (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
+{
+	[UIView animateWithDuration:0.2 animations:^{
+		view.height -= 5;
+	}];
+}
+
+- (void)mapView:(MKMapView *)mapView didDeselectAnnotationView:(MKAnnotationView *)view
+{
+	[UIView animateWithDuration:0.2 animations:^{
+		view.height += 5;
+	}];
+}
+
 
 @end

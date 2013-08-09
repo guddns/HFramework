@@ -52,6 +52,9 @@
 		9DEA20DF17B1FB91004A897A /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DEA20DE17B1FB91004A897A /* ViewController_iPad.xib */; };
 		9DEA20EE17B34773004A897A /* HModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DEA20ED17B34773004A897A /* HModal.m */; };
 		9DEA20F017B34ABA004A897A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DEA20EF17B34ABA004A897A /* QuartzCore.framework */; };
+		9DEA20F217B4630D004A897A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DEA20F117B4630D004A897A /* MapKit.framework */; };
+		9DEA20F417B46319004A897A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DEA20F317B46318004A897A /* CoreLocation.framework */; };
+		9DEA20F717B4AAE0004A897A /* TestAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DEA20F617B4AAE0004A897A /* TestAnnotationView.m */; };
 		9DF043A2178BB6F100301B89 /* HFNavigationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF043A1178BB6F100301B89 /* HFNavigationManager.m */; };
 		9DF043BC178BCE1600301B89 /* UIButton+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF043BB178BCE1600301B89 /* UIButton+Additions.m */; };
 		9DF043C4178BCF6D00301B89 /* UIBarButtonItem+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF043C3178BCF6D00301B89 /* UIBarButtonItem+Additions.m */; };
@@ -151,6 +154,10 @@
 		9DEA20EC17B34773004A897A /* HModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HModal.h; path = Controllers/HModal.h; sourceTree = "<group>"; };
 		9DEA20ED17B34773004A897A /* HModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HModal.m; path = Controllers/HModal.m; sourceTree = "<group>"; };
 		9DEA20EF17B34ABA004A897A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		9DEA20F117B4630D004A897A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		9DEA20F317B46318004A897A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		9DEA20F517B4AAE0004A897A /* TestAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestAnnotationView.h; sourceTree = "<group>"; };
+		9DEA20F617B4AAE0004A897A /* TestAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestAnnotationView.m; sourceTree = "<group>"; };
 		9DF043A0178BB6F100301B89 /* HFNavigationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFNavigationManager.h; path = Controllers/HFNavigationManager.h; sourceTree = "<group>"; };
 		9DF043A1178BB6F100301B89 /* HFNavigationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFNavigationManager.m; path = Controllers/HFNavigationManager.m; sourceTree = "<group>"; };
 		9DF043BA178BCE1600301B89 /* UIButton+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Additions.h"; sourceTree = "<group>"; };
@@ -170,6 +177,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DEA20F417B46319004A897A /* CoreLocation.framework in Frameworks */,
+				9DEA20F217B4630D004A897A /* MapKit.framework in Frameworks */,
 				9DEA20F017B34ABA004A897A /* QuartzCore.framework in Frameworks */,
 				9DCBE9DE178661500062193D /* libHFramework.a in Frameworks */,
 				9DCBE9BF178661350062193D /* UIKit.framework in Frameworks */,
@@ -308,6 +317,8 @@
 				9DCBE9C4178661350062193D /* Supporting Files */,
 				9DEA20D917B1BCCB004A897A /* TestCell.h */,
 				9DEA20DA17B1BCCB004A897A /* TestCell.m */,
+				9DEA20F517B4AAE0004A897A /* TestAnnotationView.h */,
+				9DEA20F617B4AAE0004A897A /* TestAnnotationView.m */,
 			);
 			path = HFrameworkSample;
 			sourceTree = "<group>";
@@ -363,6 +374,8 @@
 		9DCF96BE176AFF9D00D86FAA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9DEA20F317B46318004A897A /* CoreLocation.framework */,
+				9DEA20F117B4630D004A897A /* MapKit.framework */,
 				9DEA20EF17B34ABA004A897A /* QuartzCore.framework */,
 				9D0B55C0176E90440046CEA8 /* Security.framework */,
 				9DCF96BF176AFF9D00D86FAA /* Foundation.framework */,
@@ -503,6 +516,7 @@
 				9DCBE9CE178661350062193D /* AppDelegate.m in Sources */,
 				9DCBE9D7178661350062193D /* ViewController.m in Sources */,
 				9DEA20DB17B1BCCB004A897A /* TestCell.m in Sources */,
+				9DEA20F717B4AAE0004A897A /* TestAnnotationView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
