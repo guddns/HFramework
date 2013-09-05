@@ -79,7 +79,6 @@
 	return [self.viewController inputAccessoryView];
 }
 
-
 - (void)toggleSelection:(UITapGestureRecognizer *)recognizer {
 	UITableViewCell *selectedCell = (UITableViewCell *) recognizer.view;
 	_selectedRow = selectedCell.tag;
@@ -92,7 +91,12 @@
 	[selectedCell setAccessoryType:UITableViewCellAccessoryCheckmark];
 	
 	[_pickerView selectRow:_selectedRow inComponent:0 animated:YES];
+	
+	if (_delegate && [_delegate respondsToSelector:@selector(comboBox:didChangedToValue:)]) {
+		[_delegate comboBox:self didChangedToValue:nil];
+	}
 }
+
 
 #pragma mark - UIPickerView DataSource, Delegate
 

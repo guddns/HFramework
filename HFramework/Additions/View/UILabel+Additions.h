@@ -18,4 +18,6 @@
 
 - (CGFloat)widthForHeight:(CGFloat)height;
 
+- (void) adjustedToFitTheSizeOfTheWidth;
+
 @end

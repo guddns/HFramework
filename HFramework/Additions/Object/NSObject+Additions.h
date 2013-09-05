@@ -12,4 +12,8 @@
 
 - (void)setURLEncodedValuesForKeysWithDictionary:(NSDictionary *)dic;
 
+- (NSString *) descriptionForObject:(NSObject *)obj
+							 locale:(id)locale
+							 indent:(NSUInteger)level;
+
 @end

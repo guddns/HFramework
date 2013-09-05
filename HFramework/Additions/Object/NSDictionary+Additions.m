@@ -7,6 +7,7 @@
 //
 
 #import "NSDictionary+Additions.h"
+#import "NSObject+Additions.h"
 #import "NSString+Additions.h"
 
 @implementation NSDictionary (Additions)
@@ -29,7 +30,7 @@
 	if ( 0 == [array count] ) {
 		return nil;
 	}
-    
+	
 	NSObject * result = nil;
 	NSDictionary * dict = self;
 	
@@ -40,28 +41,28 @@
 		result = [dict objectForKey:subPath];
 		if ( nil == result )
 			return nil;
-        
+		
 		if ( [array lastObject] == subPath ) {
 			return result;
 		} else if ( NO == [result isKindOfClass:[NSDictionary class]] ) {
 			return nil;
 		}
-        
+		
 		dict = (NSDictionary *)result;
 	}
 	
 	return (result == [NSNull null]) ? nil : result;
-    
+	
 #else
 	
 	NSString *	keyPath = [path stringByReplacingOccurrencesOfString:separator withString:@"."];
 	NSRange		range = NSMakeRange( 0, 1 );
-    
+	
 	if ( [[keyPath substringWithRange:range] isEqualToString:@"."] )
 	{
 		keyPath = [keyPath substringFromIndex:1];
 	}
-    
+	
 	NSObject * result = [self valueForKeyPath:keyPath];
 	return (result == [NSNull null]) ? nil : result;
 	
@@ -94,7 +95,7 @@
 			return NO;
 		}
 	}
-    
+	
 	return NO;
 }
 
@@ -113,7 +114,7 @@
 	{
 		return [NSNumber numberWithDouble:[(NSString *)obj doubleValue]];
 	}
-    
+	
 	return nil;
 }
 
@@ -158,6 +159,41 @@
 {
 	NSObject * obj = [self objectAtPath:path];
 	return [obj isKindOfClass:[NSMutableDictionary class]] ? (NSMutableDictionary *)obj : nil;
+}
+
+- (NSString *) descriptionWithLocale:(id)locale indent:(NSUInteger)level
+{
+	NSMutableString *log = [NSMutableString string];
+	
+	if ([self.allKeys count] == 0) {
+		[log appendString:@"0 key/value pairs"];
+	} else {
+		[log appendString:@"{\n"];
+		
+		NSMutableString *indentString = [NSMutableString string];
+		for (int i = 0; i < level; i++) {
+			[indentString appendString:@"\t"];
+		}
+		
+		id key = nil;
+		for (int i = 0; i < [self count]; i++) {
+			key = self.allKeys[i];
+			
+			[log appendFormat:@"\t%@%@ = %@", indentString,
+			 [self descriptionForObject:key locale:locale indent:level + 1],
+			 [self descriptionForObject:self[key] locale:locale indent:level + 1]];
+			
+			if (i + 1 < [self count]) {
+				[log appendString:@",\n"];
+			} else {
+				[log appendString:@"\n"];
+			}
+		}
+		
+		[log appendFormat:@"%@}", indentString];
+	}
+	
+	return log;
 }
 
 @end

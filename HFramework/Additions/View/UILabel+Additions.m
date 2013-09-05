@@ -28,4 +28,12 @@
     return [self sizeWithMaxHeight:height].width;
 }
 
+- (void) adjustedToFitTheSizeOfTheWidth
+{
+	CGSize size = [self.text sizeWithFont:self.font];
+	CGRect rect = self.frame;
+	rect.size.width = size.width;
+	self.frame = rect;
+}
+
 @end

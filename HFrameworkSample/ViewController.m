@@ -81,7 +81,7 @@
     point.subtitle = @"I'm here!!!";
 	[mapView addAnnotation:point];
 	
-	[self.view addSubview:mapView];
+//	[self.view addSubview:mapView];
 }
 
 - (void)didReceiveMemoryWarning
