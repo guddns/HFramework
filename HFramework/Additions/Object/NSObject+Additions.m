@@ -23,10 +23,10 @@
 	}
 }
 
-//- (NSString *) descriptionForObject:(NSObject *)obj
-//                            locale:(id)locale
-//                            indent:(NSUInteger)level
-//{
+- (NSString *) descriptionForObject:(NSObject *)obj
+                            locale:(id)locale
+                            indent:(NSUInteger)level
+{
 //    NSString *objString = nil;
 //	
 //    if ([obj isKindOfClass:[NSString class]]) {
@@ -47,6 +47,27 @@
 //    }
 //	
 //    return objString;
-//}
+	
+	NSString *objString = nil;
+	
+    if ([obj isKindOfClass:[NSString class]]) {
+        objString = [NSString stringWithFormat:@"\"%@\"", (NSString *)obj];
+    }
+	else if ([obj isKindOfClass:[NSArray class]]) {
+		objString = [(NSArray *)obj descriptionWithLocale:locale indent:level];
+    }
+	else if ([obj isKindOfClass:[NSDictionary class]]) {
+		objString = [(NSDictionary *)obj descriptionWithLocale:locale indent:level];
+    }
+    else if ([obj respondsToSelector:@selector(descriptionWithLocale:)]) {
+        objString = [obj performSelector:@selector(descriptionWithLocale:) withObject:locale];
+    }
+    else {
+        objString = [obj description];
+    }
+	
+    return objString;
+
+}
 
 @end
