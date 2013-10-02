@@ -23,30 +23,30 @@
 	}
 }
 
-- (NSString *) descriptionForObject:(NSObject *)obj
-                            locale:(id)locale
-                            indent:(NSUInteger)level
-{
-    NSString *objString = nil;
-	
-    if ([obj isKindOfClass:[NSString class]]) {
-        objString = [NSString stringWithFormat:@"\"%@\"", (NSString *)obj];
-    }
-    else if ([obj respondsToSelector:@selector(descriptionWithLocale:indent:)]) {
-		
-        objString = [obj performSelector:@selector(descriptionWithLocale:indent:)
-                              withObject:locale
-                              withObject:[NSNumber numberWithInteger:level]];
-    }
-    else if ([obj respondsToSelector:@selector(descriptionWithLocale:)]) {
-        objString = [obj performSelector:@selector(descriptionWithLocale:)
-                              withObject:locale];
-    }
-    else {
-        objString = [obj description];
-    }
-	
-    return objString;
-}
+//- (NSString *) descriptionForObject:(NSObject *)obj
+//                            locale:(id)locale
+//                            indent:(NSUInteger)level
+//{
+//    NSString *objString = nil;
+//	
+//    if ([obj isKindOfClass:[NSString class]]) {
+//        objString = [NSString stringWithFormat:@"\"%@\"", (NSString *)obj];
+//    }
+//    else if ([obj respondsToSelector:@selector(descriptionWithLocale:indent:)]) {
+//		
+//        objString = [obj performSelector:@selector(descriptionWithLocale:indent:)
+//                              withObject:locale
+//                              withObject:[NSNumber numberWithInteger:level]];
+//    }
+//    else if ([obj respondsToSelector:@selector(descriptionWithLocale:)]) {
+//        objString = [obj performSelector:@selector(descriptionWithLocale:)
+//                              withObject:locale];
+//    }
+//    else {
+//        objString = [obj description];
+//    }
+//	
+//    return objString;
+//}
 
 @end

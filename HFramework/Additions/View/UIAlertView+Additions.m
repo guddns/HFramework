@@ -7,12 +7,10 @@
 //
 
 #import "UIAlertView+Additions.h"
-
 #import <objc/runtime.h>
 
 static char DISMISS_IDENTIFIER;
 static char CANCEL_IDENTIFIER;
-
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
