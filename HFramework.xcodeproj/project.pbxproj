@@ -62,6 +62,7 @@
 		9DF043BC178BCE1600301B89 /* UIButton+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF043BB178BCE1600301B89 /* UIButton+Additions.m */; };
 		9DF043C4178BCF6D00301B89 /* UIBarButtonItem+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF043C3178BCF6D00301B89 /* UIBarButtonItem+Additions.m */; };
 		9DF0446B178E66E900301B89 /* NSTimer+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0446A178E66E900301B89 /* NSTimer+Blocks.m */; };
+		9DFB9B1E180EC1D80022488E /* NSNumber+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DFB9B1D180EC1D80022488E /* NSNumber+Additions.m */; };
 		FD07CE14178B41670058344B /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = FD07CE13178B41670058344B /* NSString+Additions.m */; };
 		FDEB7E78179D8E91002AA415 /* NSObject+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEB7E77179D8E91002AA415 /* NSObject+Additions.m */; };
 /* End PBXBuildFile section */
@@ -175,6 +176,8 @@
 		9DF043C3178BCF6D00301B89 /* UIBarButtonItem+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Additions.m"; sourceTree = "<group>"; };
 		9DF04469178E66E800301B89 /* NSTimer+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+Blocks.h"; sourceTree = "<group>"; };
 		9DF0446A178E66E900301B89 /* NSTimer+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+Blocks.m"; sourceTree = "<group>"; };
+		9DFB9B1C180EC1D80022488E /* NSNumber+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+Additions.h"; sourceTree = "<group>"; };
+		9DFB9B1D180EC1D80022488E /* NSNumber+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+Additions.m"; sourceTree = "<group>"; };
 		FD07CE12178B41670058344B /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
 		FD07CE13178B41670058344B /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
 		FDEB7E76179D8E90002AA415 /* NSObject+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Additions.h"; sourceTree = "<group>"; };
@@ -246,6 +249,8 @@
 				9D1A42EB17D81519005DE8E2 /* NSArray+Additions.m */,
 				9D1A42ED17D81568005DE8E2 /* NSSet+Additions.h */,
 				9D1A42EE17D81568005DE8E2 /* NSSet+Additions.m */,
+				9DFB9B1C180EC1D80022488E /* NSNumber+Additions.h */,
+				9DFB9B1D180EC1D80022488E /* NSNumber+Additions.m */,
 			);
 			path = Object;
 			sourceTree = "<group>";
@@ -568,6 +573,7 @@
 				9DEA20EE17B34773004A897A /* HModal.m in Sources */,
 				9D1A42EC17D81519005DE8E2 /* NSArray+Additions.m in Sources */,
 				9D1A42EF17D81569005DE8E2 /* NSSet+Additions.m in Sources */,
+				9DFB9B1E180EC1D80022488E /* NSNumber+Additions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
