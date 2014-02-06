@@ -17,6 +17,7 @@
 		9D37C48C17B06DEB00F7BF9C /* UIViewController+Is4Inch.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D37C48B17B06DEB00F7BF9C /* UIViewController+Is4Inch.m */; };
 		9D9895C417A8D84E00BAC77A /* HInputAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D9895C317A8D84D00BAC77A /* HInputAccessoryView.m */; };
 		9D9895DA17A8EC9600BAC77A /* HComboBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D9895D917A8EC9500BAC77A /* HComboBox.m */; };
+		9DB2EDCC18A30EC200F61F15 /* ImageZoomScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DB2EDCB18A30EC200F61F15 /* ImageZoomScrollView.m */; };
 		9DCBE9AE178647A00062193D /* AVPlayer+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DCBE991178647A00062193D /* AVPlayer+Additions.m */; };
 		9DCBE9AF178647A00062193D /* NSDictionary+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DCBE993178647A00062193D /* NSDictionary+Additions.m */; };
 		9DCBE9B0178647A00062193D /* NSString+MD5Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DCBE995178647A00062193D /* NSString+MD5Addition.m */; };
@@ -98,6 +99,8 @@
 		9D9895C317A8D84D00BAC77A /* HInputAccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HInputAccessoryView.m; sourceTree = "<group>"; };
 		9D9895D817A8EC9500BAC77A /* HComboBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HComboBox.h; sourceTree = "<group>"; };
 		9D9895D917A8EC9500BAC77A /* HComboBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HComboBox.m; sourceTree = "<group>"; };
+		9DB2EDCA18A30EC200F61F15 /* ImageZoomScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageZoomScrollView.h; sourceTree = "<group>"; };
+		9DB2EDCB18A30EC200F61F15 /* ImageZoomScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageZoomScrollView.m; sourceTree = "<group>"; };
 		9DCBE98E178647A00062193D /* HF_Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HF_Additions.h; sourceTree = "<group>"; };
 		9DCBE990178647A00062193D /* AVPlayer+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AVPlayer+Additions.h"; sourceTree = "<group>"; };
 		9DCBE991178647A00062193D /* AVPlayer+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AVPlayer+Additions.m"; sourceTree = "<group>"; };
@@ -319,6 +322,8 @@
 				9D9895C317A8D84D00BAC77A /* HInputAccessoryView.m */,
 				9D9895D817A8EC9500BAC77A /* HComboBox.h */,
 				9D9895D917A8EC9500BAC77A /* HComboBox.m */,
+				9DB2EDCA18A30EC200F61F15 /* ImageZoomScrollView.h */,
+				9DB2EDCB18A30EC200F61F15 /* ImageZoomScrollView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -573,6 +578,7 @@
 				9DEA20EE17B34773004A897A /* HModal.m in Sources */,
 				9D1A42EC17D81519005DE8E2 /* NSArray+Additions.m in Sources */,
 				9D1A42EF17D81569005DE8E2 /* NSSet+Additions.m in Sources */,
+				9DB2EDCC18A30EC200F61F15 /* ImageZoomScrollView.m in Sources */,
 				9DFB9B1E180EC1D80022488E /* NSNumber+Additions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
