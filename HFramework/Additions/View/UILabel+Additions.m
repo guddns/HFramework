@@ -38,18 +38,18 @@
 
 - (CGSize)sizeToFitWidth
 {
-	CGSize size = [self.text sizeWithFont:self.font constrainedToSize:CGSizeMake(self.frame.size.width, MAXFLOAT) lineBreakMode:self.lineBreakMode];
+	CGSize size = [self.text sizeWithFont:self.font constrainedToSize:CGSizeMake(MAXFLOAT, self.frame.size.height) lineBreakMode:self.lineBreakMode];
 	CGRect frame = self.frame;
-	frame.size.height = size.height;
+	frame.size.width = size.width;
 	self.frame = frame;
 	return self.frame.size;
 }
 
 - (CGSize)sizeToFitHeight
 {
-	CGSize size = [self.text sizeWithFont:self.font constrainedToSize:CGSizeMake(MAXFLOAT, self.frame.size.height) lineBreakMode:self.lineBreakMode];
+	CGSize size = [self.text sizeWithFont:self.font constrainedToSize:CGSizeMake(self.frame.size.width, MAXFLOAT) lineBreakMode:self.lineBreakMode];
 	CGRect frame = self.frame;
-	frame.size.width = size.width;
+	frame.size.height = size.height;
 	self.frame = frame;
 	return self.frame.size;
 }
