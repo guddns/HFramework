@@ -28,12 +28,30 @@
     return [self sizeWithMaxHeight:height].width;
 }
 
-- (void) adjustedToFitTheSizeOfTheWidth
+- (void)adjustedToFitTheSizeOfTheWidth
 {
 	CGSize size = [self.text sizeWithFont:self.font];
 	CGRect rect = self.frame;
 	rect.size.width = size.width;
 	self.frame = rect;
+}
+
+- (CGSize)sizeToFitWidth
+{
+	CGSize size = [self.text sizeWithFont:self.font constrainedToSize:CGSizeMake(self.frame.size.width, MAXFLOAT) lineBreakMode:self.lineBreakMode];
+	CGRect frame = self.frame;
+	frame.size.height = size.height;
+	self.frame = frame;
+	return self.frame.size;
+}
+
+- (CGSize)sizeToFitHeight
+{
+	CGSize size = [self.text sizeWithFont:self.font constrainedToSize:CGSizeMake(MAXFLOAT, self.frame.size.height) lineBreakMode:self.lineBreakMode];
+	CGRect frame = self.frame;
+	frame.size.width = size.width;
+	self.frame = frame;
+	return self.frame.size;
 }
 
 @end
