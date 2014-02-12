@@ -12,8 +12,10 @@
 
 + (UIButton *)buttonWithImageNamed:(NSString *)name;
 
-+ (UIButton *)createWithImage:(UIImage *)nImg delegate:(id)delegate action:(SEL)action;
++ (UIButton *)buttonWithImage:(UIImage *)dImg delegate:(id)delegate action:(SEL)action;
 
-+ (UIButton *)createWithImage:(UIImage *)nImg highlightImage:(UIImage *)hImg delegate:(id)delegate action:(SEL)action;
++ (UIButton *)buttonWithImage:(UIImage *)dImg highlightImage:(UIImage *)hImg delegate:(id)delegate action:(SEL)action;
+
+- (void)addEventHandler:(void (^)(void))handler forControlEvents:(UIControlEvents)controlEvents;
 
 @end

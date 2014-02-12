@@ -10,8 +10,8 @@
 
 @interface UIBarButtonItem (Additions)
 
-+ (UIBarButtonItem *)createWithImage:(UIImage *)nImg delegate:(id)delegate action:(SEL)action;
++ (UIBarButtonItem *)barButtonItemWithImage:(UIImage *)dImg delegate:(id)delegate action:(SEL)action;
 
-+ (UIBarButtonItem *)createWithImage:(UIImage *)nImg highlightImage:(UIImage *)hImg delegate:(id)delegate action:(SEL)action;
++ (UIBarButtonItem *)barButtonItemWithImage:(UIImage *)dImg highlightImage:(UIImage *)hImg delegate:(id)delegate action:(SEL)action;
 
 @end

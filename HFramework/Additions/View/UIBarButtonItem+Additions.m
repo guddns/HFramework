@@ -13,16 +13,16 @@
 
 @implementation UIBarButtonItem (Additions)
 
-+ (UIBarButtonItem *)createWithImage:(UIImage *)nImg delegate:(id)delegate action:(SEL)action
++ (UIBarButtonItem *)barButtonItemWithImage:(UIImage *)dImg delegate:(id)delegate action:(SEL)action
 {
-	UIButton *button = [UIButton createWithImage:nImg delegate:delegate action:action];
+	UIButton *button = [UIButton buttonWithImage:dImg delegate:delegate action:action];
 	UIBarButtonItem *barButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
 	return barButtonItem;
 }
 
-+ (UIBarButtonItem *)createWithImage:(UIImage *)nImg highlightImage:(UIImage *)hImg delegate:(id)delegate action:(SEL)action
++ (UIBarButtonItem *)barButtonItemWithImage:(UIImage *)dImg highlightImage:(UIImage *)hImg delegate:(id)delegate action:(SEL)action
 {
-	UIButton *button = [UIButton createWithImage:nImg highlightImage:hImg delegate:delegate action:action];
+	UIButton *button = [UIButton buttonWithImage:dImg highlightImage:hImg delegate:delegate action:action];
 	UIBarButtonItem *barButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
 	return barButtonItem;
 }
