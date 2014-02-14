@@ -27,4 +27,11 @@
 	return barButtonItem;
 }
 
++ (UIBarButtonItem *)barButtonItemSpace:(NSInteger)width
+{
+	UIBarButtonItem *buttonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
+	buttonItem.width = width;
+	return buttonItem;
+}
+
 @end

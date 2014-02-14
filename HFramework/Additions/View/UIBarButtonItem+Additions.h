@@ -14,4 +14,6 @@
 
 + (UIBarButtonItem *)barButtonItemWithImage:(UIImage *)dImg highlightImage:(UIImage *)hImg delegate:(id)delegate action:(SEL)action;
 
++ (UIBarButtonItem *)barButtonItemSpace:(NSInteger)width;
+
 @end
