@@ -16,6 +16,7 @@
 		9D37BF9F17AA375400F7BF9C /* UIImage+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D37BF9E17AA375300F7BF9C /* UIImage+Additions.m */; };
 		9D37C48917AF9A8200F7BF9C /* select_box_car_use.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D37C48817AF9A8200F7BF9C /* select_box_car_use.png */; };
 		9D37C48C17B06DEB00F7BF9C /* UIViewController+Is4Inch.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D37C48B17B06DEB00F7BF9C /* UIViewController+Is4Inch.m */; };
+		9D7E78D818B1A7CC0078E804 /* NSData+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D7E78D718B1A7CC0078E804 /* NSData+Additions.m */; };
 		9D9895C417A8D84E00BAC77A /* HInputAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D9895C317A8D84D00BAC77A /* HInputAccessoryView.m */; };
 		9D9895DA17A8EC9600BAC77A /* HComboBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D9895D917A8EC9500BAC77A /* HComboBox.m */; };
 		9DB2EDCC18A30EC200F61F15 /* ImageZoomScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DB2EDCB18A30EC200F61F15 /* ImageZoomScrollView.m */; };
@@ -98,6 +99,8 @@
 		9D37C48817AF9A8200F7BF9C /* select_box_car_use.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = select_box_car_use.png; sourceTree = "<group>"; };
 		9D37C48A17B06DEB00F7BF9C /* UIViewController+Is4Inch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Is4Inch.h"; sourceTree = "<group>"; };
 		9D37C48B17B06DEB00F7BF9C /* UIViewController+Is4Inch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Is4Inch.m"; sourceTree = "<group>"; };
+		9D7E78D618B1A7CC0078E804 /* NSData+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Additions.h"; sourceTree = "<group>"; };
+		9D7E78D718B1A7CC0078E804 /* NSData+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Additions.m"; sourceTree = "<group>"; };
 		9D9895C217A8D84D00BAC77A /* HInputAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HInputAccessoryView.h; sourceTree = "<group>"; };
 		9D9895C317A8D84D00BAC77A /* HInputAccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HInputAccessoryView.m; sourceTree = "<group>"; };
 		9D9895D817A8EC9500BAC77A /* HComboBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HComboBox.h; sourceTree = "<group>"; };
@@ -257,6 +260,8 @@
 				9D1A42EE17D81568005DE8E2 /* NSSet+Additions.m */,
 				9DFB9B1C180EC1D80022488E /* NSNumber+Additions.h */,
 				9DFB9B1D180EC1D80022488E /* NSNumber+Additions.m */,
+				9D7E78D618B1A7CC0078E804 /* NSData+Additions.h */,
+				9D7E78D718B1A7CC0078E804 /* NSData+Additions.m */,
 			);
 			path = Object;
 			sourceTree = "<group>";
@@ -573,6 +578,7 @@
 				9DF043BC178BCE1600301B89 /* UIButton+Additions.m in Sources */,
 				9DF043C4178BCF6D00301B89 /* UIBarButtonItem+Additions.m in Sources */,
 				9DF0446B178E66E900301B89 /* NSTimer+Blocks.m in Sources */,
+				9D7E78D818B1A7CC0078E804 /* NSData+Additions.m in Sources */,
 				9D115F511793ABFA00C93CF8 /* NSDate+Additions.m in Sources */,
 				9D115F711793CF0300C93CF8 /* ATArrayView.m in Sources */,
 				FDEB7E78179D8E91002AA415 /* NSObject+Additions.m in Sources */,
